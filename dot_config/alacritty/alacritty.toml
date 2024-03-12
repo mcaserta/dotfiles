@@ -20,6 +20,7 @@ family = "Hack Nerd Font Mono"
 [window]
 decorations = "buttonless"
 dynamic_title = true
+option_as_alt = "Both"
 startup_mode = "Maximized"
 
 [window.dimensions]
