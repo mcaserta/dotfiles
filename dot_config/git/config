@@ -1,0 +1,32 @@
+# default case
+[include]
+  path = config.personal
+
+# when working with company-x
+[includeIf "gitdir:**/alten/**/.git"]
+  path = config.alten
+[commit]
+	verbose = true
+[core]
+	autocrlf = input
+	editor = nvim
+	fsmonitor = true
+	pager = delta
+[credential]
+	helper = cache
+[diff]
+	algorithm = histogram
+	tool = difftastic
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = zdiff3
+[push]
+	autoSetupRemote = true
+	default = simple
+[pull]
+	rebase = true
+[rebase]
+	autostash = true

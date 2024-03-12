@@ -1,0 +1,5 @@
+[user]
+	name = Michele Caserta
+	email = michele.caserta@alten.it
+[commit]
+  gpgsign = false

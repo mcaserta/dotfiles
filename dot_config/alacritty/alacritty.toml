@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#111111"
+foreground = "#c5c8c6"
+
+[cursor]
+blink_interval = 750
+blink_timeout = 0
+unfocused_hollow = true
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 18.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[window]
+decorations = "buttonless"
+dynamic_title = true
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 100
+lines = 30

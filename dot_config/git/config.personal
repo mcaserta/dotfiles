@@ -1,0 +1,6 @@
+[user]
+	name = Mirko Caserta
+	email = mirko.caserta@gmail.com
+  signingkey = C15CE03CE65C2D3E
+[commit]
+  gpgsign = false
