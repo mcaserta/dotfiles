@@ -4,10 +4,10 @@ if [[ Darwin == $(uname) ]]; then
   ## TextEdit
 
   ### Create an Untitled Document at Launch
-  defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
+  # defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
 
   #### Use Plain Text Mode as Default
-  defaults write com.apple.TextEdit RichText -int 0
+  # defaults write com.apple.TextEdit RichText -int 0
 
   ## Finder
 
