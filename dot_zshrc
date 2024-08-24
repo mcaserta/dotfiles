@@ -1,7 +1,7 @@
 PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 if [[ Darwin == $(uname) ]]; then
-  PATH="/opt/homebrew/opt/node@14/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+  PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
 elif [[ Linux == $(uname) ]]; then
   PATH="/snap/bin:$PATH"
 fi
