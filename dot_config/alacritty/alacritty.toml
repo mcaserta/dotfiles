@@ -18,7 +18,7 @@ size = 18.0
 family = "Hack Nerd Font Mono"
 
 [window]
-decorations = "buttonless"
+#decorations = "buttonless"
 dynamic_title = true
 option_as_alt = "Both"
 startup_mode = "Maximized"
