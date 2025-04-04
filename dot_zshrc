@@ -7,6 +7,7 @@ elif [[ Linux == $(uname) ]]; then
 fi
 
 [[ -d "$HOME/.cargo/bin" ]] && PATH="$HOME/.cargo/bin:$PATH"
+[[ -d "$HOME/.rd/bin" ]] && PATH="$HOME/.rd/bin:$PATH"
 
 export PATH
 
@@ -78,6 +79,8 @@ if [[ "$TERMINAL_EMULATOR" != 'JetBrains-JediTerm' ]]
 then 
    ZSH_TMUX_AUTOSTART=true
 fi
+
+zstyle :omz:plugins:ssh-agent identities id_ed25519 mcaserta-alten
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/

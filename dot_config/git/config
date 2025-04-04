@@ -7,6 +7,7 @@
   path = config.alten
 [commit]
 	verbose = true
+	gpgSign = true
 [core]
 	autocrlf = input
 	editor = nvim
@@ -18,7 +19,8 @@
 	algorithm = histogram
 	tool = difftastic
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg
+	format = openpgp
 [init]
 	defaultBranch = main
 [merge]
@@ -30,3 +32,12 @@
 	rebase = true
 [rebase]
 	autostash = true
+[user]
+	name = Michele Caserta
+	email = michele.caserta@alten.it
+	signingKey = C6155E2680C18F5A3CB7DFCE0678E1F3884CC44C
+[tag]
+	forceSignAnnotated = true
+[gpg "ssh"]
+	program = 
+	allowedSignersFile = 

@@ -28,9 +28,4 @@ if [[ Darwin == $(uname) ]]; then
 
   ### Reset Launchpad Layout
   defaults write com.apple.dock ResetLaunchPad -bool true 
-
-  ## Keyboard
-
-  ### Enable hold a key to get accented letters and special chars
-  defaults write -g ApplePressAndHoldEnabled -bool true
 fi
