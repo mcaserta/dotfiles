@@ -87,7 +87,7 @@ zstyle :omz:plugins:ssh-agent identities id_ed25519 mcaserta-alten
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aliases aws brew colored-man-pages docker docker-compose dotenv eza fzf gcloud git gnu-utils gpg-agent gradle isodate macos mvn nmap rsync sdk ssh-agent starship)
+plugins=(aliases aws brew colored-man-pages docker docker-compose dotenv eza fzf gcloud git gnu-utils gpg-agent gradle helm isodate kubectl kubectx macos mvn nmap rsync sdk ssh-agent starship)
 
 source $ZSH/oh-my-zsh.sh
 
