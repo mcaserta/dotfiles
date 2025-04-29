@@ -8,6 +8,7 @@ fi
 
 [[ -d "$HOME/.cargo/bin" ]] && PATH="$HOME/.cargo/bin:$PATH"
 [[ -d "$HOME/.rd/bin" ]] && PATH="$HOME/.rd/bin:$PATH"
+[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 
 export PATH
 
