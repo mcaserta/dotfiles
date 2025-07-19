@@ -1,7 +1,16 @@
 PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 if [[ Darwin == $(uname) ]]; then
-  PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+  HB="/opt/homebrew"
+  for i in \
+    ${HB}/bin \
+    ${HB}/sbin \
+    ${HB}/opt/rustup/bin \
+    ${HB}/opt/coreutils/libexec/gnubin \
+    ; do
+      [[ -d "${i}" ]] && PATH="${i}:$PATH"
+  done
+  unset HB
 elif [[ Linux == $(uname) ]]; then
   PATH="/snap/bin:$PATH"
 fi
