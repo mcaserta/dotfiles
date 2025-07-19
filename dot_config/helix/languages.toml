@@ -1,0 +1,13 @@
+[[language]]
+name="rust"
+formatter = { command = "rustfmt" , args = ["+nightly"] }
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = {command = "prettier", args = ["--parser", "markdown"]}
+
+[[language]]
+name = "bash"
+auto-format = true
+formatter = {command = "shfmt"}
