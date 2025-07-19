@@ -1,18 +1,17 @@
 PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 if [[ Darwin == $(uname) ]]; then
-  HB="/opt/homebrew"
-  for i in \
-    ${HB}/bin \
-    ${HB}/sbin \
-    ${HB}/opt/rustup/bin \
-    ${HB}/opt/coreutils/libexec/gnubin \
-    ; do
-      [[ -d "${i}" ]] && PATH="${i}:$PATH"
-  done
-  unset HB
+	HB="/opt/homebrew"
+	for i in \
+		${HB}/bin \
+		${HB}/sbin \
+		${HB}/opt/rustup/bin \
+		${HB}/opt/coreutils/libexec/gnubin; do
+		[[ -d "${i}" ]] && PATH="${i}:$PATH"
+	done
+	unset HB
 elif [[ Linux == $(uname) ]]; then
-  PATH="/snap/bin:$PATH"
+	PATH="/snap/bin:$PATH"
 fi
 
 [[ -d "$HOME/.cargo/bin" ]] && PATH="$HOME/.cargo/bin:$PATH"
@@ -85,9 +84,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-if [[ "$TERMINAL_EMULATOR" != 'JetBrains-JediTerm' ]]
-then 
-   ZSH_TMUX_AUTOSTART=true
+if [[ "$TERMINAL_EMULATOR" != 'JetBrains-JediTerm' ]]; then
+	ZSH_TMUX_AUTOSTART=true
 fi
 
 zstyle :omz:plugins:ssh-agent identities id_ed25519 mcaserta-alten
@@ -118,13 +116,13 @@ FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 FZF_ALT_C_COMMAND='fd --type d --strip-cwd-prefix'
 
 if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c
-    else
-        zellij
-    fi
+	if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+		zellij attach -c
+	else
+		zellij
+	fi
 
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
+	if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+		exit
+	fi
 fi
