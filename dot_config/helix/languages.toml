@@ -10,4 +10,4 @@ formatter = {command = "prettier", args = ["--parser", "markdown"]}
 [[language]]
 name = "bash"
 auto-format = true
-formatter = {command = "shfmt"}
+formatter = {command = "shfmt", args = ["--simplify", "--indent 2"]}
