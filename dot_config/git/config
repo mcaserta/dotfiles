@@ -10,7 +10,7 @@
 	gpgSign = true
 [core]
 	autocrlf = input
-	editor = nvim
+	editor = hx
 	fsmonitor = true
 	pager = delta
 [credential]
@@ -19,7 +19,7 @@
 	algorithm = histogram
 	tool = difftastic
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	program = gpg
 	format = openpgp
 [init]
 	defaultBranch = main
@@ -32,12 +32,3 @@
 	rebase = true
 [rebase]
 	autostash = true
-[user]
-	name = Michele Caserta
-	email = michele.caserta@alten.it
-	signingKey = C6155E2680C18F5A3CB7DFCE0678E1F3884CC44C
-[tag]
-	forceSignAnnotated = true
-[gpg "ssh"]
-	program = 
-	allowedSignersFile = 

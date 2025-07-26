@@ -1,5 +1,7 @@
 [user]
-	name = Michele Caserta
-	email = michele.caserta@alten.it
+  name = Michele Caserta
+  email = michele.caserta@alten.it
+  signingKey = C6155E2680C18F5A3CB7DFCE0678E1F3884CC44C
 [commit]
-  gpgsign = false
+  gpgsign = true
+  verbose = true
