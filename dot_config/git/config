@@ -38,12 +38,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
-[user]
-	name = Michele Caserta
-	email = michele.caserta@alten.it
-	signingKey = C6155E2680C18F5A3CB7DFCE0678E1F3884CC44C
 [tag]
 	forceSignAnnotated = true
-[gpg "ssh"]
-	program = 
-	allowedSignersFile = 
