@@ -116,7 +116,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export LANG='en_US.UTF-8'
-export EDITOR='hx'
+export EDITOR='nvim'
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 

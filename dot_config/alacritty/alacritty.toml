@@ -12,10 +12,11 @@ blinking = "Always"
 shape = "Block"
 
 [font]
-size = 18.0
+size = 16.0
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+#family = "Hack Nerd Font Mono"
+family = "FiraMono Nerd Font"
 
 [window]
 #decorations = "buttonless"
