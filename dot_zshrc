@@ -14,9 +14,12 @@ elif [[ Linux == $(uname) ]]; then
 	PATH="/snap/bin:$PATH"
 fi
 
-[[ -d "$HOME/.cargo/bin" ]] && PATH="$HOME/.cargo/bin:$PATH"
-#[[ -d "$HOME/.rd/bin" ]] && PATH="$HOME/.rd/bin:$PATH"
-[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
+for i in \
+  "$HOME/.cargo/bin" \
+  "$HOME/.local/bin" \
+  "/opt/podman/bin"; do
+  [[ -d "${i}" ]] && PATH="${i}:$PATH"
+done
 
 export PATH
 
