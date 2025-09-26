@@ -1,17 +1,17 @@
 PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 if [[ Darwin == $(uname) ]]; then
-	HB="/opt/homebrew"
-	for i in \
-		${HB}/bin \
-		${HB}/sbin \
-		${HB}/opt/rustup/bin \
-		${HB}/opt/coreutils/libexec/gnubin; do
-		[[ -d "${i}" ]] && PATH="${i}:$PATH"
-	done
-	unset HB
+  HB="/opt/homebrew"
+  for i in \
+    ${HB}/bin \
+    ${HB}/sbin \
+    ${HB}/opt/rustup/bin \
+    ${HB}/opt/coreutils/libexec/gnubin; do
+    [[ -d "${i}" ]] && PATH="${i}:$PATH"
+  done
+  unset HB
 elif [[ Linux == $(uname) ]]; then
-	PATH="/snap/bin:$PATH"
+  PATH="/snap/bin:$PATH"
 fi
 
 for i in \
@@ -83,9 +83,9 @@ zstyle :omz:plugins:ssh-agent identities id_ed25519 mcaserta-alten
 # Cache completions aggressively
 autoload -Uz compinit
 if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
-	compinit
+  compinit
 else
-	compinit -C
+  compinit -C
 fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#663399,standout'
@@ -93,15 +93,15 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 plugins=(
-	aliases
-	aws
-	brew
-	colored-man-pages
-	docker
-	docker-compose
-	dotenv
-	eza
-	fzf
+  aliases
+  aws
+  brew
+  colored-man-pages
+  docker
+  docker-compose
+  dotenv
+  eza
+  fzf
   git
   gnu-utils
   gpg-agent
@@ -129,17 +129,16 @@ FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude 
 FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 FZF_ALT_C_COMMAND='fd --type d --strip-cwd-prefix'
 
-if [[ "$TERM_PROGRAM" == "ghostty" || "$TERM_PROGRAM" == "iTerm.app" || "$TERM_PROGRAM" == "Apple_Terminal" || "$TERM" == "alacritty" ]];
-then
-	if [[ -z "$ZELLIJ" ]]; then
-		if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-			zellij attach -c
-		else
-			zellij
-		fi
+if [[ "$TERM_PROGRAM" == "ghostty" || "$TERM_PROGRAM" == "iTerm.app" || "$TERM_PROGRAM" == "Apple_Terminal" || "$TERM" == "alacritty" || "$TERM_PROGRAM" == "rio" ]]; then
+  if [[ -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+      zellij attach -c
+    else
+      zellij
+    fi
 
-		if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-			exit
-		fi
-	fi
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+      exit
+    fi
+  fi
 fi
